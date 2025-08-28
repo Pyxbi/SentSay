@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-s" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>♥ SentSay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="sentient.png" type="image/png">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="hero">
+        <div class="badges">
+          <img src="sentient.png" alt="Logo" class="logo">
+          SentSay 
+        </div>
+        <div style="height:8px"></div>
+        <div class="tones" id="tones"></div>
+      </div>
+
+      <div class="panel">
+        <label for="situation">Choose a situation to get started…</label>
+        <select id="situation">
+          <option value="making weekend plans on a dating app">Making weekend plans (dating app)</option>
+          <option value="replying to a late text from a friend">Late reply to a friend</option>
+          <option value="following up professionally after a meeting">Professional follow-up</option>
+          <option value="group chat decision making">Group chat decision</option>
+          <option value="custom">Custom situation...</option>
+        </select>
+        
+        <div id="customSituationContainer" style="display: none; margin-top: 10px;">
+          <label for="customSituation">Describe your situation:</label>
+          <input type="text" id="customSituation" placeholder="e.g., apologizing to my boss for being late" />
+        </div>
+
+        <div style="height:10px"></div>
+        <label for="message">Paste the message you received</label>
+        <textarea id="message" placeholder="idk what to say"></textarea>
+        <div class="row">
+          <div class="muted">Select a situation and choose your tone</div>
+          <button class="btn" id="generate">Get Response</button>
+        </div>
+
+        <div id="error" class="error"></div>
+        <div id="results" class="results"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
