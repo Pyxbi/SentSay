@@ -1,4 +1,4 @@
-# SentSay Demo (API-First)
+# SentSay Demo 
 
 A minimal full‑stack prototype that generates emotionally intelligent, copy‑ready replies using Fireworks.
 
@@ -34,6 +34,9 @@ Then open `http://localhost:5001/`.
 ```
 { "message": "idk what to say", "situation": "making weekend plans", "tone": "Flirty" }
 ```
+
+## Futures
+- Will be have collection of data and fine-tune it
 - Returns:
 ```
 { "options": ["…", "…", "…"], "raw": "full text" }
