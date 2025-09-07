@@ -12,7 +12,7 @@ CORS(app)
 
 def build_system_prompt() -> str:
     return (
-        "You are SayItRight, an assistant that crafts concise, emotionally intelligent replies to real-life messages. "
+        "You are SentSay, an assistant that crafts concise, emotionally intelligent replies to real-life messages. "
         "Optimize for clarity, warmth, and natural texting tone. Keep messages short, sound human, and avoid emojis unless explicitly asked."
     )
 
@@ -27,7 +27,7 @@ def build_tone_guidance(tone: str) -> str:
     }
     return tone_map.get(tone.lower(), "Neutral, helpful, and concise.")
 
-# ✨ NEW FUNCTION TO HANDLE CUSTOM SITUATIONS ✨
+# instruction
 def build_instruction(situation: str, tone: str, tone_guidance: str) -> str:
     # Check for the keyword "email" in the situation text
     if 'email' in situation.lower():
@@ -64,7 +64,7 @@ def generate():
     system_prompt = build_system_prompt()
     tone_guidance = build_tone_guidance(tone)
     
-    # Use our new dynamic instruction builder!
+    # Use our new dynamic instruction builder
     instruction = build_instruction(situation, tone, tone_guidance)
 
     payload = {
